@@ -1,0 +1,153 @@
+/* Mulish Font from Google */
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&display=swap');
+
+/* Global Style */
+* {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Mulish', sans-serif;
+}
+
+:root {
+  --primary-color: #ff5400;
+  --dark-1: #131318;
+  --dark-2: #424247;
+  --dark-3: #5a5a5d;
+}
+
+/* Reused Styles */
+
+.section_description {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+/* Nav Menu */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0;
+  align-items: center;
+}
+
+.nav_logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.nav_img {
+  max-width: 48px;
+  height: auto;
+  align-items: center;
+  margin-right: 16px;
+}
+
+.nav_text {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--dark-1);
+}
+
+.nav_text span {
+  color: var(--primary-color);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  margin: 0;
+}
+
+.nav_link {
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--dark-2);
+  padding-left: 44px;
+  transition: all 0.3s;
+}
+
+.nav_link:hover {
+  color: var(--primary-color);
+}
+
+.nav_link.active {
+  color: var(--primary-color);
+}
+
+/* Header Styles */
+
+header {
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(19, 19, 24, 0.8) 0%, rgba(19, 19, 24, 0) 100%), url(images/header_img.png);
+  text-align: center;
+  color: #fff;
+  padding: 106px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom left;
+}
+
+.header_wrap {
+  max-width: 770px;
+  margin: 0 auto;
+}
+.header_title {
+  font-size: 64px;
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+.header_form {
+  margin-top: 48px;
+  width: 100%;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 16px;
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header_form input,
+.header_form select,
+.header_form-btn {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(19, 19, 24, 0.5);
+  padding: 16px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background-color: #fff;
+}
+
+.header_form-btn {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.header_form-btn:hover {
+  cursor: pointer;
+}
+
+.header_form-btn i {
+  margin-right: 8px;
+}
+
+.header_form input::placeholder {
+  opacity: 1;
+}

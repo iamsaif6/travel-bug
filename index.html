@@ -3,8 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/03a9dec68e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css" />
     <title>Travel Bug</title>
   </head>
-  <body></body>
+  <body>
+    <!-- Nav Section Start Here -->
+    <nav>
+      <a href="#" class="nav_logo">
+        <img src="images/logo.png" alt="" class="nav_img" />
+        <p class="nav_text">Travel <span>Bug</span></p>
+      </a>
+      <ul>
+        <li><a href="#" class="nav_link active">home</a></li>
+        <li><a href="#" class="nav_link">Packages</a></li>
+        <li><a href="#" class="nav_link">Testimonial</a></li>
+        <li><a href="#" class="nav_link">Blog</a></li>
+        <li><a href="#" class="nav_link">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- Nav Section End Here -->
+    <!-- Header Section Start here -->
+    <header>
+      <div class="header_wrap">
+        <h1 class="header_title">Explore Your Travel</h1>
+        <p class="section_description">
+          Embark on a journey of discovery with our travel website, where seamless planning meets unforgettable experiences. Explore the
+          world's wonders and create lasting memories with curated itineraries and expert travel tips.
+        </p>
+        <!-- Header Form Start-->
+        <form action="#" class="header_form">
+          <input type="search" placeholder="Where go" required />
+          <select name="" id="" required>
+            <option value="When" selected disabled>When</option>
+            <option value="Today">Today</option>
+            <option value="Tomorrow">Tomorrow</option>
+            <option value="Custom">Custom</option>
+          </select>
+          <select name="" id="" required>
+            <option value="Select Type" selected disabled>Select Type</option>
+            <option value="by air">By Air</option>
+            <option value="By Sea">By Sea</option>
+            <option value="By Car">By Car</option>
+          </select>
+          <button class="header_form-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i> Find Now</button>
+        </form>
+        <!-- Header Form End-->
+      </div>
+    </header>
+  </body>
 </html>

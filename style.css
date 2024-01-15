@@ -86,6 +86,10 @@ nav ul li {
   color: var(--primary-color);
 }
 
+.nav_hamburger {
+  display: none;
+}
+
 /* Header Styles */
 
 header {
@@ -150,4 +154,37 @@ header {
 
 .header_form input::placeholder {
   opacity: 1;
+}
+
+/* ########## 
+Responsive Styles
+############*/
+
+@media screen and (max-width: 600px) {
+  nav ul {
+    display: none;
+  }
+
+  .nav_hamburger {
+    display: block;
+    font-size: 25px;
+  }
+
+  .section_description {
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  .header_title {
+    font-size: 22px;
+  }
+
+  .header_form {
+    flex-direction: column;
+  }
+
+  header {
+    padding: 32px 24px;
+    margin: 0 20px 0 20px;
+  }
 }

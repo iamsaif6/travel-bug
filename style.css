@@ -11,9 +11,15 @@
 }
 
 body {
-  max-width: 1170px;
   margin: 0 auto;
   padding: 0;
+}
+
+nav,
+header,
+main {
+  max-width: 1170px;
+  margin: 0 auto;
 }
 
 :root {
@@ -62,6 +68,8 @@ body {
   padding: 14px 34px;
   border-radius: 8px;
   display: inline-block;
+  outline: none;
+  border: none;
 }
 
 /* Nav Menu */
@@ -76,6 +84,7 @@ nav {
 .nav_logo {
   display: flex;
   align-items: center;
+  justify-content: center;
   text-decoration: none;
 }
 
@@ -411,13 +420,146 @@ header .section_description {
   margin: 30px 0;
 }
 
+/* NewsLetter Section Styles */
+
+.newsletter {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.newsletter hr {
+  border: 1px;
+  height: 1px;
+  background: rgba(19, 19, 24, 0.1);
+  margin: 24px 0;
+}
+
+.newsletter_imgbox {
+  flex-basis: 60%;
+  position: relative;
+}
+
+.newsletter_textbox {
+  border-radius: 16px;
+  border: 1px solid #ff5400;
+  padding: 40px;
+  flex-basis: 40%;
+}
+
+.newsletter_img {
+  width: 100%;
+}
+
+.newsletter_form input,
+.newsletter_form button {
+  display: block;
+  width: 100%;
+}
+.newsletter_form input {
+  padding: 16px 20px;
+  color: rgba(19, 19, 24, 0.3);
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 8px;
+  background: rgba(19, 19, 24, 0.05);
+  border: none;
+}
+
+.newsletter_form input:first-child {
+  margin-bottom: 16px;
+}
+
+.newsletter_form button {
+  margin-top: 24px;
+}
+
+.newsletter_tag {
+  background-color: var(--primary-color);
+  color: #fff;
+  border-radius: 16px;
+  text-align: center;
+  padding: 30px 50px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: rotate(-19.628deg) translateY(-50%);
+}
+
+.newsletter_tag p {
+  font-size: 24px;
+}
+
+.newsletter_tag h3 {
+  font-size: 32px;
+  font-weight: 800;
+}
+
+/* Foter Section */
+
+footer {
+  margin-top: 100px;
+  background: rgba(19, 19, 24, 0.05);
+  padding: 110px 20px;
+  text-align: center;
+}
+
+footer .section_description {
+  margin: 15px 0 33px 0;
+}
+.footer_wrap {
+  max-width: 770px;
+  margin: 0 auto;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+footer hr {
+  border: 1px;
+  height: 1px;
+  background: rgba(19, 19, 24, 0.1);
+  margin: 50px 0;
+}
+
+footer ul li a {
+  font-size: 25px;
+  color: var(--dark-1);
+}
+
+.footer_copyright {
+  color: var(--dark-1);
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 300;
+}
+
 /* ########## 
 Responsive Styles
 ############*/
 
 @media screen and (max-width: 600px) {
-  body {
+  main,
+  footer {
     padding: 0 20px;
+  }
+
+  nav {
+    padding: 20px;
+  }
+
+  header {
+    margin: 0 20px;
+  }
+
+  .header_form {
+    margin-top: 30px;
   }
 
   .section_title,
@@ -426,7 +568,6 @@ Responsive Styles
     margin-bottom: 16px;
   }
 
-  nav,
   .tours,
   .video {
     padding: 25px 0;
@@ -460,8 +601,13 @@ Responsive Styles
 
   .header_form,
   .tours,
-  .video {
+  .video,
+  .newsletter {
     flex-direction: column;
+  }
+
+  .newsletter {
+    align-items: normal;
   }
 
   header {
@@ -490,7 +636,8 @@ Responsive Styles
     max-height: 180px;
   }
 
-  .choose_us {
+  .choose_us,
+  footer hr {
     margin: 24px 0;
   }
 
@@ -503,7 +650,8 @@ Responsive Styles
     padding: 180px 16px 16px 16px;
   }
 
-  .deals_textbox {
+  .deals_textbox,
+  .newsletter_textbox {
     padding: 26px;
   }
 
@@ -517,5 +665,22 @@ Responsive Styles
 
   .deals_textbox ul {
     gap: 18px;
+  }
+
+  .newsletter_tag {
+    padding: 20px 30px;
+  }
+
+  .newsletter_tag p {
+    font-size: 14px;
+  }
+
+  .newsletter_tag h3 {
+    font-size: 20px;
+  }
+
+  footer {
+    padding: 35px 20px;
+    margin-top: 30px;
   }
 }

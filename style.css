@@ -45,6 +45,13 @@ body {
   margin-bottom: 24px;
 }
 
+.section_subtile {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--dark-1);
+  margin-bottom: 16px;
+}
+
 .btn_primary {
   text-decoration: none;
   text-transform: capitalize;
@@ -276,6 +283,37 @@ header .section_description {
   grid-area: Bandarban;
 }
 
+/* choose_us Section */
+
+.choose_us {
+  margin: 100px 0;
+}
+
+.choose_us_container {
+  display: flex;
+  gap: 24px;
+  margin-top: 48px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.choose_us_box {
+  border-radius: 16px;
+  border: 1px solid rgba(251, 181, 99, 0.2);
+  background: rgba(251, 181, 99, 0.05);
+  padding: 32px;
+  width: 573px;
+}
+.choose_us_box:nth-child(2) {
+  border: 1px solid rgba(41, 206, 246, 0.2);
+  background: rgba(41, 206, 246, 0.05);
+}
+
+.choose_us_img {
+  max-width: 64px;
+  margin-bottom: 32px;
+}
+
 /* ########## 
 Responsive Styles
 ############*/
@@ -285,7 +323,8 @@ Responsive Styles
     padding: 0 20px;
   }
 
-  .section_title {
+  .section_title,
+  .section_subtile {
     font-size: 20px;
   }
 
@@ -328,8 +367,12 @@ Responsive Styles
     padding: 32px 24px;
   }
 
+  .choose_us_container,
   .gallary_container {
     margin-top: 16px;
+  }
+
+  .gallary_container {
     gap: 16px;
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -344,5 +387,14 @@ Responsive Styles
 
   .gallary_container > div {
     max-height: 180px;
+  }
+
+  .choose_us {
+    margin: 24px 0;
+  }
+
+  .choose_us_img {
+    max-width: 48px;
+    margin-bottom: 16px;
   }
 }

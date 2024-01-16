@@ -1,6 +1,77 @@
 /* Mulish Font from Google */
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&display=swap');
 
+/* Hamberger menu */
+
+nav label span {
+  display: block;
+  height: 3px;
+  width: 40px;
+  background-color: var(--primary-color);
+  position: relative;
+  opacity: 1;
+}
+
+nav input,
+nav label span {
+  visibility: hidden;
+}
+
+nav label {
+  display: flex;
+  cursor: pointer;
+  flex-direction: column;
+}
+
+nav label input {
+  opacity: 0;
+  display: none;
+}
+
+nav label span:nth-child(4) {
+  top: 7px;
+}
+nav label span:nth-child(2) {
+  top: -7px;
+}
+
+.hamberger_wrap {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 60vw;
+  background-color: rgba(255, 255, 255, 0.91);
+  color: var(--dark-1);
+}
+
+.hamberger_wrap ul,
+.hamberger_wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hamberger_wrap ul {
+  flex-direction: column;
+  gap: 30px;
+}
+
+.hamberger_wrap .nav_link {
+  padding: 0;
+}
+
+.hamberger_wrap {
+  left: -100%;
+  visibility: hidden;
+  transition: 0.4s all;
+}
+
+nav label input:checked ~ .hamberger_wrap {
+  left: 0;
+  visibility: visible;
+}
+
 /* Global Style */
 * {
   margin: 0;
@@ -139,7 +210,7 @@ nav ul li {
 }
 
 .nav_hamburger {
-  display: none;
+  /* display: none; */
   color: var(--dark-1);
 }
 
@@ -642,6 +713,16 @@ Responsive Styles
 ############*/
 
 @media screen and (max-width: 600px) {
+  /* HamberGer Menu */
+
+  nav input,
+  nav label span {
+    visibility: visible;
+  }
+
+  /* nav label {
+    display: block;
+  } */
   .price_title {
     font-size: 30px;
   }

@@ -25,6 +25,12 @@ body {
 
 /* Reused Styles */
 
+.section_textbox {
+  max-width: 643px;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .section_description {
   font-size: 16px;
   font-weight: 400;
@@ -214,6 +220,62 @@ header .section_description {
   margin-bottom: 16px;
 }
 
+/* Gallary Section */
+
+.gallary_container {
+  margin-top: 48px;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-areas:
+    'Maldives  Maldives  Maldives Maldives Maldives  Indonesia  Indonesia   Indonesia Indonesia Indonesia'
+    'Srilanka  Srilanka  Srilanka   North  North  North   North       North       Kashmir  Kashmir'
+    'Bangladesh Bangladesh Bangladesh Bangladesh  Bandarban Bandarban Bandarban Bandarban Bandarban Bandarban';
+}
+
+.gallary_container > div {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  font-size: 28px;
+  font-weight: 800;
+  color: #fff;
+}
+
+.gallary_1 {
+  background: url(images/1.png);
+  grid-area: Maldives;
+}
+.gallary_2 {
+  background: url(images/2.png);
+  grid-area: Indonesia;
+}
+.gallary_3 {
+  background: url(images/3.png);
+  grid-area: Srilanka;
+}
+.gallary_4 {
+  background: url(images/4.png);
+  grid-area: North;
+}
+.gallary_5 {
+  background: url(images/5.png);
+  grid-area: Kashmir;
+}
+.gallary_6 {
+  background: url(images/6.png);
+  grid-area: Bangladesh;
+}
+.gallary_7 {
+  background: url(images/7.png);
+  grid-area: Bandarban;
+}
+
 /* ########## 
 Responsive Styles
 ############*/
@@ -266,6 +328,21 @@ Responsive Styles
     padding: 32px 24px;
   }
 
-  .tours {
+  .gallary_container {
+    margin-top: 16px;
+    gap: 16px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'Maldives'
+      'Indonesia'
+      'Srilanka'
+      'North'
+      'Kashmir'
+      'Bangladesh'
+      'Bandarban';
+  }
+
+  .gallary_container > div {
+    max-height: 180px;
   }
 }

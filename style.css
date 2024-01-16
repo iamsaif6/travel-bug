@@ -6,7 +6,7 @@
 nav label span {
   display: block;
   height: 3px;
-  width: 40px;
+  width: 35px;
   background-color: var(--primary-color);
   position: relative;
   opacity: 1;
@@ -29,10 +29,10 @@ nav label input {
 }
 
 nav label span:nth-child(4) {
-  top: 7px;
+  top: 5px;
 }
 nav label span:nth-child(2) {
-  top: -7px;
+  top: -5px;
 }
 
 .hamberger_wrap {

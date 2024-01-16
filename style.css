@@ -314,6 +314,103 @@ header .section_description {
   margin-bottom: 32px;
 }
 
+/* Deals Section Styles */
+.deals_container_wrapper {
+  margin: 48px 0;
+}
+
+.deals_container {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  border-radius: 16px;
+  margin-bottom: 24px;
+  padding: 56px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.deals_container:first-child {
+  background-image: url(images/deals1.png);
+}
+.deals_container:nth-child(2) {
+  background-image: url(images/deals2.png);
+  justify-content: flex-start;
+}
+.deals_container:last-child {
+  background-image: url(images/deals1.png);
+}
+
+.deals_textbox {
+  border-radius: 16px;
+  border: 2px solid #fff;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(2.5px);
+  padding: 50px;
+  max-width: 580px;
+}
+
+.deals_textbox ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  /* justify-content: baseline; */
+  color: var(--dark-3);
+  font-size: 16px;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 26px;
+}
+
+.deals_textbox ul li i,
+.deals_price {
+  color: var(--primary-color);
+  margin-right: 8px;
+  font-size: 22px;
+}
+
+.deals_price {
+  font-size: 20px;
+  font-weight: 800;
+  margin: 16px 0 24px 0;
+}
+
+.deals_btn {
+  text-align: center;
+}
+
+/* Video Section */
+
+.video {
+  padding: 100px 0;
+  display: flex;
+  gap: 28px;
+}
+
+.video_textbox {
+  flex-basis: 50%;
+}
+
+.video_videobox {
+  border-radius: 16px;
+  flex-basis: 50%;
+  min-height: 250px;
+}
+
+.video_videobox iframe {
+  height: 100%;
+  width: 100%;
+  border-radius: 16px;
+}
+.video ul {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 26px;
+  padding-left: 15px;
+  margin: 30px 0;
+}
+
 /* ########## 
 Responsive Styles
 ############*/
@@ -326,13 +423,16 @@ Responsive Styles
   .section_title,
   .section_subtile {
     font-size: 20px;
+    margin-bottom: 16px;
   }
 
   nav,
-  .tours {
+  .tours,
+  .video {
     padding: 25px 0;
   }
-  nav ul {
+  nav ul,
+  .deals_btn {
     display: none;
   }
 
@@ -359,7 +459,8 @@ Responsive Styles
   }
 
   .header_form,
-  .tours {
+  .tours,
+  .video {
     flex-direction: column;
   }
 
@@ -396,5 +497,25 @@ Responsive Styles
   .choose_us_img {
     max-width: 48px;
     margin-bottom: 16px;
+  }
+
+  .deals_container {
+    padding: 180px 16px 16px 16px;
+  }
+
+  .deals_textbox {
+    padding: 26px;
+  }
+
+  .deals_container_wrapper {
+    margin-bottom: 0;
+  }
+
+  .deals_textbox .section_subtile {
+    margin-bottom: 8px;
+  }
+
+  .deals_textbox ul {
+    gap: 18px;
   }
 }
